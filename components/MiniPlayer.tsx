@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import {
   View,
@@ -91,7 +93,7 @@ export default function MiniPlayer() {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 60, // Above tab bar
+    bottom: 60, // Above tab bar (60px is tab bar height)
     left: 0,
     right: 0,
     backgroundColor: COLORS.surface,
@@ -102,6 +104,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 5,
+    zIndex: 1000, // Ensure it appears above other content
   },
   progressContainer: {
     height: 2,

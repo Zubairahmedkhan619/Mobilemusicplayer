@@ -18,6 +18,8 @@ import SongItem from '@/components/SongItem';
 import { COLORS, SIZES } from '@/utils/constants';
 
 export default function LibraryScreen() {
+     const { state } = useAudio();
+
   const [songs, setSongs] = useState<Song[]>([]);
   const [filteredSongs, setFilteredSongs] = useState<Song[]>([]);
   const [searchQuery, setSearchQuery] = useState('');

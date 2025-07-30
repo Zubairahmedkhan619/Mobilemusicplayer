@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
 import { AudioProvider } from '@/context/AudioContext';
 import PlayerControls from '@/components/PlayerControls';
-import LibraryScreen from '@/screens/LibraryScreeen';
+import LibraryScreen from './app/(tabs)/library';
+// import LibraryScreen from '';
 
 export default function App() {
   const [showPlayer, setShowPlayer] = useState(false);
@@ -19,7 +20,7 @@ export default function App() {
           />
         ) : (
           <View style={styles.content}>
-            <LibraryScreen />
+            <LibraryScreen/>
             <PlayerControls 
               isMinimized={true}
               onMinimize={() => setShowPlayer(true)}
